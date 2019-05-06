@@ -7,7 +7,9 @@
     "lint": "eslint --ext=.js,.jsx .",
     "test": "jest",
     "prettier": "prettier --write \"./**/*.{js,jsx,scss}\"",
-    "precommit": "./node_modules/.bin/lint-staged"
+    "precommit": "./node_modules/.bin/lint-staged",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "lint-staged": {
     "./**/*.{js,jsx}": [
@@ -61,7 +63,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bem-react-helper": "^1.1.2",
-    "preact": "^8.2.9"
+    "preact": "^8.2.9",
+    "snyk": "^1.161.1"
   },
   "eslintIgnore": [
     "public"
@@ -80,5 +83,6 @@
   },
   "engines": {
     "node": ">=8"
-  }
+  },
+  "snyk": true
 }
